@@ -1,0 +1,13 @@
+---
+import LeftNavbarLink from "./leftNavbarLink.astro";
+
+const pathName = new URL(Astro.request.url).pathname;
+const currentPath = pathName.split("/");
+---
+
+<LeftNavbarLink title="Home" url="" currentPath={currentPath[1]}/>
+<LeftNavbarLink title="About" url="about" currentPath={currentPath[1]}/>
+<LeftNavbarLink title="Education" url="education" currentPath={currentPath[1]}/>
+<LeftNavbarLink title="Research" url="research" currentPath={currentPath[1]}/>
+<LeftNavbarLink title="Work" url="work" currentPath={currentPath[1]}/>
+<LeftNavbarLink title="Projects" url="projects" currentPath={currentPath[1]}/>
