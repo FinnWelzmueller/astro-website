@@ -1,19 +1,11 @@
 ---
-import { Icon } from 'astro-icon/components';
+
+import RightNavbarLink from './rightNavbarLink.astro';
 ---
 
-<a href="https://www.linkedin.com/in/finnwelzmueller/" target="_blank" class="relative">
-    <Icon name="fa-brands:linkedin" width="28" height="28" class="relative top-0 hover:-top-1 ease-linear duration-300"/>
-</a>
-<a href="https://www.instagram.com/finnwe97/" target="_blank">
-    <Icon name="fa-brands:instagram-square" width="28" height="28"/>
-</a>
-<a href="mailto:finnwelzmueller97@gmail.com" target="_blank">
-    <Icon name="fa-solid:envelope" width="28" height="28"/>
-</a>
-<a href="https://www.github.com/FinnWelzmueller" target="_blank">
-    <Icon name="fa-brands:github" width="28" height="28"/>
-</a>
-<a href="https://www.researchgate.net/profile/Finn-Welzmueller" target="_blank">
-    <Icon name="fa-brands:researchgate" width="28" height="28"/>
-</a>
+
+<RightNavbarLink icon="fa-brands:linkedin" url="https://www.linkedin.com/in/finnwelzmueller/" title="LinkedIn" ></RightNavbarLink>
+<RightNavbarLink icon="fa-brands:instagram-square" url="https://www.instagram.com/finnwe97/" title="Instagram"></RightNavbarLink>
+<RightNavbarLink icon="fa-solid:envelope" url="mailto:finnwelzmueller97@gmail.com" title="Mail" target="_self"></RightNavbarLink>
+<RightNavbarLink icon="fa-brands:github" url="https://www.github.com/FinnWelzmueller" title="GitHub"></RightNavbarLink>
+<RightNavbarLink icon="fa-brands:researchgate" url="https://www.researchgate.net/profile/Finn-Welzmueller" title="ResearchGate" iconcolor=""></RightNavbarLink>
