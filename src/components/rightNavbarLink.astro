@@ -1,0 +1,16 @@
+---
+import '../styles/global.css';
+import { Icon } from 'astro-icon/components';
+const { icon, url, title, iconcolor, target="_blank" } = Astro.props;
+
+export interface Props {
+    icon: string;
+    url: string;
+    title: string;
+    target?: string;
+    iconcolor?: string;
+}
+---
+
+<a href={url} target={target} class="relative" >
+    <Icon name={icon} title={title} width="28" height="28" class={`relative ${iconcolor} top-0 hover:-top-1 ease-linear duration-200`}/>
