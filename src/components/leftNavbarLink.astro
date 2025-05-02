@@ -1,13 +1,13 @@
 ---
 const { title, url, currentPath } = Astro.props;
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 <a href={"/" + url} class="relative group">
     {title}
     {
         currentPath === url ? (
-        <span class="inline-block w-full h-[1px] absolute left-0 bottom-1 bg-gray-900">&nbsp;</span>
+        <span class="inline-block w-full h-[1px] absolute left-0 bottom-1 bg-dark dark:bg-light">&nbsp;</span>
         ) : (
-        <span class="inline-block w-0 h-[1px] absolute left-0 bottom-1 bg-gray-900 group-hover:w-full ease-linear duration-200">&nbsp;</span>)
+        <span class="inline-block w-0 h-[1px] absolute left-0 bottom-1 bg-dark dark:bg-light group-hover:w-full ease-linear duration-200">&nbsp;</span>)
     }
 </a>
