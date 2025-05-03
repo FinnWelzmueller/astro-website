@@ -1,7 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import picture from '../assets/picture_square.png';
 ---
 
-<Layout>
-	<h1 class="text-6xl">Hi! I'm Finn</h1>
+<Layout title="Hi! I'm Finn">
+	<div class="flex flex-row justify-between items-center">
+		<div class="flex flex-col justify-between items-center w-1/2">
+			<div class="mb-6 leading-relaxed">
+				Physicist, space enthusiast, and software developer with a passion for exploring data and building software tools.
+    			My work spans from satellite systems and scientific research to web development and open source projects.
+    			Welcome to my personal website — feel free to explore.
+			</div>
+		</div>
+		<div class="w-1/2 flex justify-center items-center py-10 ">
+			<Image src={picture} alt="Profile Picture" class="rounded-full w-3/4 h-3/4 border-4 border-dark dark:border-light"/>
+		</div>
+
+	</div>
 </Layout>
