@@ -1,6 +1,22 @@
 ---
-const { url, title } = Astro.props;
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+    url: string;
+    title: string;
+    external?: boolean;
+}
+const { url, title, external } = Astro.props;
 ---
 
-<a href="", title="">
-</a>
+<p class="m-0">
+    <a href={url} class="inline-flex items-center font-medium border-2 border-light bg-accentLight rounded-lg py-2 px-6 dark:border-dark dark:bg-accentDark
+     dark:text-dark hover:border-dark hover:bg-transparent dark:hover:border-light dark:hover:bg-transparent dark:hover:text-light">
+        <span>{title}</span>
+        {
+        external ? (
+            <Icon name="ph:arrow-square-out" width="24" height="24" class="ml-2"/>
+        ) : ("")
+        }
+        </a>
+</p>

@@ -9,7 +9,6 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<script>
-			// Setze "dark"-Klasse so früh wie möglich, um Flackern zu vermeiden
 			(() => {
 			  const theme = localStorage.getItem("theme");
 			  if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
