@@ -1,0 +1,19 @@
+---
+export interface Props {
+    name: string;
+    yearStart: string;
+    yearEnd?: string;
+    tags?: string[];
+    grade?: string;
+}
+
+const { name, yearStart, yearEnd } = Astro.props;
+---
+<div class="w-full min-h-20 border-b dark:border-light flex flex-col justify-center px-4">
+  <div class="text-sm">
+    {yearStart} - {yearEnd ?? "present"}
+  </div>
+  <div class="text-lg font-medium text-gray-900 dark:text-white">
+    {name}
+  </div>
+</div>
