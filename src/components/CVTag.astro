@@ -1,7 +1,14 @@
 ---
+import '../styles/global.css';
 export interface Props {
     tag: string;
+    iconcolor?: string;
 }
 
-const { tag } = Astro.props;
+const { tag, iconcolor } = Astro.props;
 ---
+
+<div class={`inline-flex items-center font-medium border-2 rounded-lg text-xs py-1 px-3 border-dark ${iconcolor}`}>
+    <span>{tag}</span>
+
+</div>
