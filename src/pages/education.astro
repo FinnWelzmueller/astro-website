@@ -1,5 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CVEntry from '../components/CVEntry.astro';
 ---
 <Layout title="My Education">
+    <div class="grid grid-cols-1 md:grid-cols-2" gap-4>
+    <CVEntry 
+    name="Bachelor of Science - Physics" 
+    yearStart="2015" 
+    yearEnd="2019" 
+    grade="2.1" 
+    location="University of Hamburg" 
+    tags={["Mathematics", "Classical Physics", "Astrophysics", "Quantum Mechanics", "Laboratory Work", "LaTeX", "Scientific Presentations"]}>
+
+    </CVEntry>
+    <CVEntry 
+    name="Master of Science - Physics" 
+    yearStart="2019" 
+    yearEnd="2022" 
+    grade="1.5" 
+    location="University of Hamburg"
+    >
+
+    </CVEntry>
+    <CVEntry 
+    name="Master of Science - Space Sciences and Technologies" 
+    yearStart="2023" 
+    grade="1.1" 
+    location="University of Bremen">
+
+    </CVEntry>
+    <CVEntry 
+    name="Space Weather Training Course" 
+    yearStart="2024" 
+    yearEnd="2024" 
+    grade="A" 
+    location="ESA Academy">
+
+    </CVEntry>
+    <CVEntry 
+    name="CubeSat Hands-On Training Week" 
+    yearStart="2024" 
+    yearEnd="2024" 
+    grade="A" 
+    location="ESA Academy">
+
+    </CVEntry>
+    </div>
 </Layout>
