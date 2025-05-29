@@ -3,30 +3,46 @@ import Layout from '../layouts/Layout.astro';
 import CVEntry from '../components/CVEntry.astro';
 ---
 <Layout title="My Education">
-    <div class="grid grid-cols-1 md:grid-cols-2" gap-4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <CVEntry 
-    name="Bachelor of Science - Physics" 
+    name="Physics" 
+    degree="Bachelor of Science"
     yearStart="2015" 
     yearEnd="2019" 
     grade="2.1" 
     location="University of Hamburg" 
-    tags={["Mathematics", "Classical Physics", "Astrophysics", "Quantum Mechanics", "Laboratory Work", "LaTeX", "Scientific Presentations"]}>
+    tags={["Mathematics", "Classical Physics", "Astrophysics", "Quantum Mechanics", "Laboratory Work", "LaTeX", "Scientific Presentations"]}
+    docs={[
+        {title: "Certificate", url: ""},
+        {title: "Bachelor Thesis", url: ""}
+    ]}>
 
     </CVEntry>
     <CVEntry 
-    name="Master of Science - Physics" 
+    name="Physics" 
+    degree="Master of Science"
     yearStart="2019" 
     yearEnd="2022" 
     grade="1.5" 
     location="University of Hamburg"
+    tags={["Advanced Quantum Mechanics", "Astroparticle Physics", "Extragalactic Astrophysics", "Computational Astrophysics", "Scientific Writing", "Radio Astronomy"]}
+    docs={[
+        {title: "Certificate", url: ""},
+        {title: "Master Thesis", url: ""}
+    ]}
     >
 
     </CVEntry>
     <CVEntry 
-    name="Master of Science - Space Sciences and Technologies" 
+    name="Space Sciences and Technologies" 
+    degree="Master of Science"
     yearStart="2023" 
     grade="1.1" 
-    location="University of Bremen">
+    location="University of Bremen"
+    tags={["Atmospheric Physics", "Climate Physics", "Communication Technologies for Space", "Space Electronics", "Control Theory", "Geodesy & Gravity", "GNSS", "Machine Learning for Swarm Exploration"]}
+    docs={[
+        {title: "Transcript of Records", url:""},
+    ]}>
 
     </CVEntry>
     <CVEntry 
@@ -34,7 +50,12 @@ import CVEntry from '../components/CVEntry.astro';
     yearStart="2024" 
     yearEnd="2024" 
     grade="A" 
-    location="ESA Academy">
+    location="ESA Academy"
+    tags={["Space Weather Phyiscs", "Space Weather Impact on Technology", "Space Weather Modelling and Forecasting", "Space Weather Surveillance"]}
+    docs={[
+        {title: "Certificate", url: ""},
+        {title: "Transcript of Records", url: ""}
+    ]}>
 
     </CVEntry>
     <CVEntry 
@@ -42,7 +63,12 @@ import CVEntry from '../components/CVEntry.astro';
     yearStart="2024" 
     yearEnd="2024" 
     grade="A" 
-    location="ESA Academy">
+    location="ESA Academy"
+    tags={["System Engineering", "Flight Software", "On-Board Data Handling", "Power Systems", "AIV", "ADCS", "Spacecraft Communication", "Spacecraft Operation"]}
+    docs={[
+        {title: "Certificate", url: ""},
+        {title: "Transcript of Records", url: ""}
+    ]}>
 
     </CVEntry>
     </div>
