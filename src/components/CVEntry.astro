@@ -1,17 +1,24 @@
 ---
 import '../styles/global.css';
 import CVTag from './CVTag.astro';
+import Button from './button.astro';
+interface DocLink {
+    title: string;
+    url: string;
+}
+
 export interface Props {
     name: string;
+    degree?: string;
     yearStart: string;
     yearEnd?: string;
     tags?: string[];
     grade?: string;
     location?: string;
-    url?: string;
+    docs?: DocLink[];
 }
 
-const { name, yearStart, yearEnd, tags, grade, location, url } = Astro.props;
+const { name, degree, yearStart, yearEnd, tags, grade, location, docs } = Astro.props;
 
 let yearDisplay: string;
 if (!yearEnd) {
@@ -23,22 +30,42 @@ else if (yearStart === yearEnd) {
 else {
     yearDisplay = `${yearStart} - ${yearEnd}`;
 }
+
 ---
-<div class="w-full min-h-20 border-b dark:border-light flex flex-col justify-center px-4">
-  <div class="text-sm">
-    {yearDisplay}
+
+<div class="w-full min-h-20 h-full flex flex-col items-stretch px-4 py-4 border-2 rounded-xl border-black dark:border-light">
+  <div class="grid grid-cols-2 gap-4 items-start">
+    <div class="text-sm col-start-1 row-start-1">{yearDisplay}</div>
+
+    <div class="text-lg font-medium col-start-1 row-start-2 text-gray-900 dark:text-white">
+      <div>{name}</div>
+      {degree && (
+        <div class="text-sm text-gray-900 dark:text-white">{degree}</div>
+      )}
+      {grade && (
+        <div class="text-sm text-gray-900 dark:text-white">Grade: {grade}</div>
+      )}
+    </div>
+
+    {location?.trim() && (
+      <div class="text-sm text-right col-start-2 row-start-2 text-gray-900 dark:text-white">
+        {location}
+      </div>
+    )}
   </div>
-  <div class="text-lg font-medium text-gray-900 dark:text-white">
-    {name}
+
+  <div class="mt-3 flex-grow flex items-end">
+    <slot class="text-sm"/>
   </div>
-  <div>
-    <slot/>
-  </div>
-   {tags && tags.length > 0 && (
-  <div class="mt-3 flex flex-wrap gap-2">
-    {tags.map(tag => (
-      <CVTag tag={tag} />
-    ))}
-  </div>
-)}
+
+  {tags && tags.length > 0 && (
+    <div class="mt-3 flex flex-wrap gap-2">
+      {tags.map(tag => (<CVTag tag={tag} />))}
+    </div>
+  )}
+  {docs && docs.length > 0 && (
+    <div class="mt-3 flex flex-wrap gap-2">
+    {docs.map(doc => (<Button url={doc.url} title={doc.title}></Button>))}
+    </div>
+  )}
 </div>
