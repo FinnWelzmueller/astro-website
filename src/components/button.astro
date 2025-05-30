@@ -5,13 +5,14 @@ export interface Props {
     url: string;
     title: string;
     external?: boolean;
+    small: boolean;
 }
-const { url, title, external } = Astro.props;
+const { url, title, external, small } = Astro.props;
 ---
 
 <p class="m-0">
-    <a href={url} class="inline-flex items-center font-medium border-2 border-light bg-accentLight rounded-lg py-2 px-6 dark:border-dark dark:bg-accentDark
-     dark:text-dark hover:border-dark hover:bg-transparent dark:hover:border-light dark:hover:bg-transparent dark:hover:text-light">
+    <a href={url} class={`inline-flex items-center font-medium border-2 border-light bg-accentLight rounded-lg  dark:border-dark dark:bg-accentDark
+     dark:text-dark hover:border-dark hover:bg-transparent dark:hover:border-light dark:hover:bg-transparent dark:hover:text-light ${small ? 'py-1 px-3 text-sm' : 'py-2 px-6'}`}>
         <span>{title}</span>
         {
         external ? (
