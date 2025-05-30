@@ -14,7 +14,7 @@
     "@iconify-json/fa-brands": "^1.2.1",
     "@iconify-json/fa-solid": "^1.2.1",
     "@iconify-json/ph": "^1.2.2",
-    "astro": "^5.7.9"
+    "astro": "^5.8.1"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
