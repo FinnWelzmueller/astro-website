@@ -65,7 +65,7 @@ else {
   )}
   {docs && docs.length > 0 && (
     <div class="mt-3 flex flex-wrap gap-2">
-    {docs.map(doc => (<Button url={doc.url} title={doc.title}></Button>))}
+    {docs.map(doc => (<Button small={true} url={doc.url} title={doc.title}></Button>))}
     </div>
   )}
 </div>
