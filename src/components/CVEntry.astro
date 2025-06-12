@@ -12,7 +12,7 @@ export interface Props {
     degree?: string;
     yearStart: string;
     yearEnd?: string;
-    tags?: string[];
+    tags: string[];
     grade?: string;
     location?: string;
     docs?: DocLink[];
@@ -33,39 +33,41 @@ else {
 
 ---
 
-<div class="w-full min-h-20 h-full flex flex-col items-stretch px-4 py-4 border-2 rounded-xl border-black dark:border-light">
-  <div class="grid grid-cols-2 gap-4 items-start">
-    <div class="text-sm col-start-1 row-start-1">{yearDisplay}</div>
+<li class="mb-10 ms-6">
+  <span class="absolute flex items-center justify-center w-6 h-6 bg-accentLight rounded-full -start-3 ring-8 ring-light dark:ring-gray-900 dark:bg-accentDark">
+    <svg class="w-2.5 h-2.5 text-dark dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+    </svg>
+  </span>
 
-    <div class="text-lg font-medium col-start-1 row-start-2 text-gray-900 dark:text-white">
-      <div>{name}</div>
-      {degree && (
-        <div class="text-sm text-gray-900 dark:text-white">{degree}</div>
-      )}
-      {grade && (
-        <div class="text-sm text-gray-900 dark:text-white">Grade: {grade}</div>
-      )}
-    </div>
-
-    {location?.trim() && (
-      <div class="text-sm text-right col-start-2 row-start-2 text-gray-900 dark:text-white">
-        {location}
-      </div>
+  <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+    {name}
+    {degree && (
+      <span class="bg-accentLight text-sm font-medium ms-3 px-2.5 py-0.5 rounded-sm dark:bg-accentDark dark:text-blue-300">
+        {degree}
+      </span>
     )}
-  </div>
+  </h3>
 
-  <div class="mt-3 flex-grow flex items-end">
-    <slot class="text-sm"/>
-  </div>
+  <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+    {yearDisplay}
+  </time>
 
-  {tags && tags.length > 0 && (
-    <div class="mt-3 flex flex-wrap gap-2">
-      {tags.map(tag => (<CVTag tag={tag} />))}
-    </div>
+  {location && (
+    <p class="mb-1 text-base font-normal text-gray-500 dark:text-gray-400 italic">
+      {location}
+    </p>
   )}
-  {docs && docs.length > 0 && (
-    <div class="mt-3 flex flex-wrap gap-2">
-    {docs.map(doc => (<Button small={true} url={doc.url} title={doc.title}></Button>))}
-    </div>
+
+  {grade && (
+    <p class="mb-1 text-base font-normal text-gray-500 dark:text-gray-400">
+      Final Grade: <span class="font-semibold">{grade}</span>
+    </p>
   )}
-</div>
+
+  {tags.length > 0 && (
+    <ul class="flex flex-wrap gap-2 mt-2">
+      {tags.map((tag) => (<CVTag tag={tag} />))}
+    </ul>
+  )}
+</li>

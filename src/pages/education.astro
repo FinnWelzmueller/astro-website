@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CVEntry from '../components/CVEntry.astro';
+import Layout from "../layouts/Layout.astro";
+import CVEntry from "../components/CVEntry.astro";
 ---
+
 <Layout title="My Education">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
     <CVEntry 
     name="Physics" 
     degree="Bachelor of Science"
@@ -15,9 +17,8 @@ import CVEntry from '../components/CVEntry.astro';
     docs={[
         {title: "Certificate", url: ""},
         {title: "Bachelor Thesis", url: ""}
-    ]}>
+    ]}></CVEntry>
 
-    </CVEntry>
     <CVEntry 
     name="Physics" 
     degree="Master of Science"
@@ -71,5 +72,9 @@ import CVEntry from '../components/CVEntry.astro';
     ]}>
 
     </CVEntry>
-    </div>
+</ol>
+
+
+
 </Layout>
+
