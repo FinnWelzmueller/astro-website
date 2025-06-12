@@ -1,16 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       colors: {
         light: "#faf0e6",
         dark: "#111827",
         accentLight: "#f97316",
-        accentDark: "#22c55e"
+        accentDark: "#1e3a8a"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
   darkMode: "class",
 }
