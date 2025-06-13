@@ -75,4 +75,9 @@ const sortedTags = (tags ?? []).sort((a, b) => a.localeCompare(b));
       {sortedTags.map((tag) => (<CVTag tag={tag} />))}
     </ul>
   )}
+  {docs && docs.length > 0 && (
+    <ul class="flex flex-wrap gap-2 mt-2">
+      {docs.map((doc) => (<Button url={doc.url} title={doc.title} external={doc.external} small={doc.small} />))}
+    </ul>
+  )}
 </li>
