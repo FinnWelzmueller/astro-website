@@ -2,9 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import CVEntry from "../components/CVEntry.astro";
 ---
-<Layout title="My Work Experience">
-    
-    <ol class="relative border-s border-gray-200 dark:border-gray-700 ">      
+<Layout title="My Work Experience" >
+    <div class="px-2 sm:px-6 lg:px-12">
+    <ol class="relative border-s border-gray-200 dark:border-gray-700">      
         <CVEntry 
         name="Freelance Tutor"
         yearStart="2017"
@@ -84,4 +84,5 @@ import CVEntry from "../components/CVEntry.astro";
         location="University of Bremen"
         ></CVEntry>
     </ol>
+    </div>
 </Layout>
