@@ -34,6 +34,8 @@ else {
 }
 const sortedTags = (tags ?? []).sort((a, b) => a.localeCompare(b));
 
+const sortedDocs = (docs ?? []).sort((a, b) => a.title.localeCompare(b.title));
+
 ---
 
 <li class="mb-10 ms-6">
@@ -77,7 +79,7 @@ const sortedTags = (tags ?? []).sort((a, b) => a.localeCompare(b));
   )}
   {docs && docs.length > 0 && (
     <ul class="flex flex-wrap gap-2 mt-2">
-      {docs.map((doc) => (<Button url={doc.url} title={doc.title} external={doc.external} small={doc.small} />))}
+      {sortedDocs.map((doc) => (<Button url={doc.url} title={doc.title} external={doc.external} small={doc.small} />))}
     </ul>
   )}
 </li>
