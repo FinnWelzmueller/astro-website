@@ -12,7 +12,7 @@ export interface Props {
     degree?: string;
     yearStart: string;
     yearEnd?: string;
-    tags: string[];
+    tags?: string[];
     grade?: string;
     location?: string;
     docs?: DocLink[];
@@ -30,6 +30,7 @@ else if (yearStart === yearEnd) {
 else {
     yearDisplay = `${yearStart} - ${yearEnd}`;
 }
+const sortedTags = (tags ?? []).sort((a, b) => a.localeCompare(b));
 
 ---
 
@@ -64,10 +65,12 @@ else {
       Final Grade: <span class="font-semibold">{grade}</span>
     </p>
   )}
-
-  {tags.length > 0 && (
+  <div class="mb-2 text-base text-gray-600 dark:text-gray-300">
+    <slot />
+  </div>
+  {tags && tags.length > 0 && (
     <ul class="flex flex-wrap gap-2 mt-2">
-      {tags.map((tag) => (<CVTag tag={tag} />))}
+      {sortedTags.map((tag) => (<CVTag tag={tag} />))}
     </ul>
   )}
 </li>
