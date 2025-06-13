@@ -1,5 +1,87 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CVEntry from "../components/CVEntry.astro";
 ---
 <Layout title="My Work Experience">
+    
+    <ol class="relative border-s border-gray-200 dark:border-gray-700 ">      
+        <CVEntry 
+        name="Freelance Tutor"
+        yearStart="2017"
+        yearEnd="2021"
+        location="Gymnasium Heidberg"
+        tags={["Teaching", "Project Management", "Workshop Developement"]}
+        >
+        </CVEntry>
+        <CVEntry
+        name="Tutor in Mathematics"
+        yearStart="2019"
+        yearEnd="2021"
+        location="University of Hamburg"
+        tags={["Teaching", "Mathematics"]}
+        >
+        </CVEntry>
+        <CVEntry
+        name="Tutor in Software Development"
+        yearStart="2020"
+        yearEnd="2021"
+        location="University of Hamburg"
+        tags={["Teaching", "Software Development", "Object Oriented Programming", "Java", "UML"]}
+        ></CVEntry>
+        <CVEntry
+        name="Working Student"
+        yearStart="2020"
+        yearEnd="2021"
+        location="University of Hamburg",
+        tags={["Python", "Bash", "Visualization of scientific results", "Git"]}
+        ></CVEntry>
+        <CVEntry
+        name="Internship in Science Division"
+        degree="Full-time"
+        yearStart="2022"
+        location="European Space Agency (ESA)"
+        tags={["Python", "Git", "Data Science", "Visualization of scientific results", "X-ray astronomy", "Frontend programming", "Angular"]}
+        ></CVEntry>
+        <CVEntry
+        name="Highschool Teacher"
+        degree="Full-time"
+        yearStart="2022"
+        yearEnd="2023"
+        location="Gymnasium Heidberg"
+        tags={["Teaching", "Project Management", "Workshop Development"]}
+        ></CVEntry>
+        <CVEntry
+        name="Working Student"
+        yearStart="2023"
+        yearEnd="2024"
+        location="Center for Applied Space Technology and Microgravity"
+        tags={["Literature Research", "LaTeX"]}
+        ></CVEntry>
+        <CVEntry
+        name="Aerodynamics Engineer"
+        degree="Voluntary Work"
+        yearStart="2023"
+        yearEnd="2025"
+        location="ASTRA e.V."
+        tags={["Python", "Trajectory Modelling", "Rocketry", "Aerodynamics", "Numerical Simulations", ]}
+        ></CVEntry>
+        <CVEntry
+        name="Working Student"
+        location="German Aerospace Center (DLR), Institute for Space Systems"
+        yearStart="2024"
+        tags={["Databases", "Python", "Docker", "DevOps", "Laboratory Work", "Research Data Management"]}
+        ></CVEntry>
+        <CVEntry
+        name="Tutor for international students"
+        degree="Voluntary Work"
+        yearStart="2024"
+        location="Erasmus Initiative University of Bremen"
+        ></CVEntry>
+        <CVEntry
+        name="Master of the Master Examination Committee"
+        degree="Voluntary Work"
+        yearStart="2024"
+        location="University of Bremen"
+        ></CVEntry>
+    </ol>
 </Layout>
