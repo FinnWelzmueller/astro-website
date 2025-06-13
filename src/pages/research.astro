@@ -1,6 +1,99 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CVEntry from '../components/CVEntry.astro';
 ---
 <Layout title="My Research">
+    <div class="px-2 sm:px-6 lg:px-12">
+    <ol class="relative border-s border-gray-200 dark:border-gray-700">  
 
+    <CVEntry
+        name="diffSph: a Python tool to compute diffuse signals from dwarf spheroidal galaxies"
+        degree="Scientific Paper"
+        yearStart="2024"
+        yearEnd="2024"
+        location="Martin Vollmann, Finn Welzmüller, Lovorka Gajović"
+        tags={["Dark Matter", "Cosmic Rays", "Synchrotron Emission", "Simulation", "Python", "Software Development", "Astroparticle Physics", "Radio Astronomy"]}
+        docs={[{title: "Journal of Cosmology and Astroparticle Physics", url: "https://iopscience.iop.org/article/10.1088/1475-7516/2024/12/046", small:true, external: true}]}>
+        <b>Abstract.</b> So far no diffuse emissions in dwarf spheroidal satellites of the Milky Way have ever been observed. Given that dwarf galaxies are predominantly 
+        composed of Dark Matter, the discovery of these signals could offer valuable insights into understanding the nature of Dark Matter. We present "diffSph", a Python 
+        tool which in its present version provides fast predictions of such diffuse signals in radio frequencies. It also features a very comprehensive module for the 
+        computation of "J" and "D" factors that are relevant for indirect Dark Matter detection using gamma rays. Routines are coupled to parton-shower algorithms and Dark 
+        Matter halo mass functions from state-of-the-art kinematic fits. This code is also useful for testing generic hypotheses (not necessarily associated with any Dark 
+        Matter candidate) about the cosmic-ray electron/positron sources in the dwarf galaxies. The diffSph tool has already been employed in searches for diffuse signals 
+        from dwarf spheroidal galaxies using the LOw Frequency ARray (LOFAR).
+    
+    </CVEntry>
+    <CVEntry
+        name="WIMP cross-section limits from LOFAR observations in dwarf spheroidal galaxies"
+        degree="Scientific Paper"
+        yearStart="2023"
+        yearEnd="2023"
+        location="Lovorka Gajović, Finn Welzmüller, Volker Heesen, et al."
+        tags={["Dark Matter", "Dwarf Galaxies", "LOFAR", "Radio Astronomy", "Cosmic Rays", "Synchrotron Emission", "Simulation", "Data Analysis", "Python", "Astroparticle Physics"]}
+        docs={[{title: "Astronomy and Astrophysics", url: "https://www.aanda.org/articles/aa/full_html/2023/05/aa45508-22/aa45508-22.html", small:true, external: true}]}>
+        <b>Abstract.</b> 
+        <p><i>Context.</i> Weakly interacting massive particles (WIMPs) can self-annihilate, thus providing us with a way to indirectly detect dark matter (DM). Dwarf 
+        spheroidal (dSph) galaxies are excellent places to search for annihilation signals because they are rich in DM and background emission is low. If &Omicron;(0.1 – 10 μG) 
+        magnetic fields in dSph galaxies exist, the particles produced in DM annihilation emit synchrotron radiation in the radio band.</p>
+        <p><i>Aims.</i> We used the non-detection of 150 MHz radio continuum emission from dSph galaxies with the LOw Frequency ARray (LOFAR) to derive constraints on the 
+        annihilation cross section of WIMPs in electron–positron pairs. Our main underlying assumption is that the transport of the cosmic rays can be described by the diffusion 
+        approximation, which necessitates the existence of magnetic fields.</p>
+        <p><i>Methods.</i> We used observations of six dSph galaxies in the LOFAR Two-metre Sky Survey (LoTSS). The data were reimaged, and a radial profile was generated for 
+        each galaxy. We also used stacking to increase the sensitivity. In order to derive upper limits on the WIMP cross section, we injected fake Gaussian sources into the 
+        data, which were then detected with 2&sigma; significance in the radial profile. These sources represent the lowest emission we would have been able to detect.</p>
+        <p><i>Results.</i> We present limits from the observations of individual galaxies as well as from stacking. We explored the uncertainty due to the choice of diffusion 
+        and magnetic field parameters by constructing three different model scenarios: optimistic (OPT), intermediate (INT), and pessimistic (PES). Assuming monochromatic 
+        annihilation into electron–positron pairs, the limits from the INT scenario exclude thermal WIMPs (&#10092;&sigma;<i>v</i>&#10093;&asymp;2.2 x 10<sup>-26</sup> cm<sup>3</sup>
+        s<sup>-1</sup>)</p> below 20 GeV, and the limits from the OPT scenario even exclude thermal WIMPs below 70 GeV. The INT limits can compete with limits set by Fermi-LAT 
+        using &gamma;-ray observations of multiple dwarf galaxies, and they are especially strong for low WIMP masses.
+    </CVEntry>
+    <CVEntry
+        name="LOFAR constraints on WIMP cross-sections in Dwarf Spheroidal Galaxies"
+        degree="Master Thesis"
+        yearStart="2022"
+        yearEnd="2022"
+        location="Finn Welzmüller"
+        tags={["Dark Matter", "Dwarf Galaxies", "LOFAR", "Radio Astronomy", "Cosmic Rays", "Synchrotron Emission", "Simulation", "Data Analysis", "Python"]}>
+        <b>Abstract.</b> Constraining properties of Dark Matter particles, such as WIMPs, is one of the biggest tasks in physics during the last decades. There are many 
+        approaches for finding these limits, both of astrophysical and non-astrophysical nature. Astrophysical approaches are for example g-ray observations or more recently 
+        radio continuum observations. For this project, we use 144 MHz radio data from the LOFAR Two-metre Sky Survey (LoTSS) to analyze radio continuum emission from six 
+        dwarf spheroidal galaxies. More precisely, we use the non-detection of synchrotron emission that are related to the selfannihilation of WIMPs into primary cosmic-ray 
+        electrons and positrons to put upper limits on the self-annihilation cross-section. These cosmic rays interact with the magnetic fields in the Dark Matter halos of 
+        these galaxies. We assume that this process is driven only by diffusion and hence use typical values for the magnetic field strength (&Omicron;(µG)) and the diffusion coefficient
+        (&Omicron;(10<sup>27</sup> cm<sup>2</sup>s<sup>-1</sup>)). To constrain the self-annihilation cross-section of WIMPs, we insert a fake-source with a known flux density into 
+        the LOFAR (u,v)-data. Background emission from AGN and large-scale foreground emission from the Milky Way require us to pre-process the data before measuring radial 
+        intensity profiles of the dwarf galaxies. Fitting Gaussians to these profiles, that contain the inserted fake-source, together with the non-detection of WIMP related 
+        signals in the observational data enable us to put upper limits on the self-annihilation cross-section. We define three scenarios with different magnetic field strengths 
+        and diffusion coefficients to handle the uncertainties of both parameters. In the optimistic scenario, where WIMP signals are most visible, we use a magnetic field 
+        strength of 10 µG and a diffusion coefficient of 10<sup>26</sup> cm<sup>2</sup>s<sup>-1</sup>. We find limits on the WIMP self-annihilation cross-section of &#10092;&sigma;<i>v</i>&#10093;
+        ~ 10<sup>-29</sup> cm<sup>3</sup>s<sup>-1</sup> for particle masses of a few GeV. In the intermediate scenario, we use Milky Way-like values for both parameters with 1 
+        µG and 10<sup>27</sup> cm<sup>2</sup>s<sup>-1</sup>. We find limits of &#10092;&sigma;<i>v</i>&#10093; ~ 10<sup>-27</sup> cm<sup>3</sup>s<sup>-1</sup> for the same mass range. In the 
+        pessimistic scenario, we choose rather conservative values for the magnetic field strength and the diffusion coefficient with 0.1 µG and 10<sup>29</sup> cm<sup>2</sup>s<sup>-1</sup>.
+        We find limits on the self-annihilation cross-section of &#10092;&sigma;<i>v</i>&#10093; ~ 10<sup>-23</sup> cm<sup>3</sup>s<sup>-1</sup> for a particle mass of a few GeV. Compared to 
+        recent limits from Fermi-LAT, our limits in the intermediate scenario matches well for these particle masses. Our results from the optimistic scenario improves the 
+        limits from Fermi-LAT by a few order of magnitudes in the same mass range. 
+    </CVEntry>
+    <CVEntry
+        name="Calculating magnetic fields in the intergalactic medium using Faraday-rotation"
+        degree="Bachelor Thesis"
+        yearStart="2019"
+        yearEnd="2019"
+        location="Finn Welzmüller"
+        tags={["Radio Astronomy", "Faraday Rotation", "Magnetic Fields", "Intergalactic Medium", "LOFAR", "VLA"]}>
+        <b>Abstract.</b> The most obvious properties of radiogalaxies are the bipolar jets made of relativistic plasma and their radiolobes that are made when the plasma hits 
+        the cluster environment. The synchrotron radiation that is emitted of the jets and lobes is linearly polarized which allows us to use the Faraday-effect to make 
+        conclusions about the magnetic fields along the line of sight. The aim of this thesis is to apply the Faraday-effect to the synchrotron radiation of a radiogalaxy to 
+        measure magnetic fields in the intergalactic medium and their influence on the plane of polarization. For that, LOFAR-data with a wavelength of 1.8 m to 2.5 m was used 
+        mainly. Furthermore, data of the VLA with a wavelength of 21 cm was used. To calculate the rotation measure (RM) of the northern and southern hotspot of the radiogalaxy, 
+        a Fourier-transformation of the linear polarization vector was made with the LOFAR-data. The difference in the RM of the hotspots is 1.9 rad m<sup>-2</sup>. Subsequently, 
+        the contribution of the surrounding cluster environment to the RM difference was estimated to be smaller than 0.9 rad m<sup>-2</sup>. Assuming a constant contribution to 
+        the RM from the Milky Way, we assign the remaining RM contribution to the intergalactic medium to be bigger than 1 rad m<sup>-2</sup>. With this value, the field strength 
+        of the intergalactic magnetic field along the line of sight was calculated for two different situations. In the first situation, the whole intergalactic medium was filled 
+        with a voidlike structure with a electron density that is similar to the average electron density in the universe. The corresponding line-of-sight magnetic field is smaller 
+        than 1.2 µG. In the second situation, the reason for the difference is a magnetised filament of the cosmic web with a electron density that is a hundred times higher than 
+        the average electron density in the universe. For a total length of the filament of 1 Mpc, the corresponding magnetic field strength along the line of sight is smaller than 
+        0.4 µG.
+        </CVEntry>
+    </ol>
+    </div>
 </Layout>
