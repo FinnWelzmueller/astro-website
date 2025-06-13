@@ -10,7 +10,11 @@ module.exports = {
         light: "#faf0e6",
         dark: "#111827",
         accentLight: "#f97316",
-        accentDark: "#1e3a8a"
+        accentDark: "#1e3a8a",
+        tagLight: "#f3f4f6",
+        tagDark: "#6b7280",
+        buttonLight: "#f97316",
+        buttonDark: "#1e3a8a"
       }
     },
   },
