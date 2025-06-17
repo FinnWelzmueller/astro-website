@@ -1,28 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/button.astro';
+import ProgressBar from '../components/progressBar.astro';
 ---
 <Layout title="About Me">
-    <p>
-        With a background in Physics (B.Sc. and M.Sc.) and now studying Space Sciences and Technologies (M.Sc.), I've always been fascinated by how we can understand the 
-        Universe - and build tools and systems to explore it! Alongside my studies, I gained hands-on experience in the space sector through internships and student jobs, 
-        both in Germany and abroad.
-    <p>
-        Beyond that, I love turning ideas into working software. Whether it's an automation tool, a simulation for a research questions or web applications! I'm especially 
-        interested in data science, machine learning and using technology to explore our complex world!
-    </p>
-    <p>
-        In my free time, you'll usually find me coding, doing sports, brewing coffee, or exploring something new - be it a new café around the corner or this new bar in my 
-        neighborhood.
-    </p>
-    <p>
-        A few things I'm proud of, beyond my academic background, is having co-authored two scientific papers and contributed to an open-source Python library. But above all,
-        I'm proud of being a curious and open-minded person - someone who can't resist taking things apart just to understand how they work.
-    </p>
-    <p> 
-        My long-term goal? Pursue a PhD in the space field and work at a leading company or agency that's shaping the future of space exploration!
-    </p>
-<Button url="https://www.google.de" title="Download my CV" external={true} small={false}></Button>
+
+<ProgressBar title="German" percentage={10}></ProgressBar>
+<ProgressBar title="English" percentage={9}></ProgressBar>
+<Button url="https://www.google.de" title="Certificate" external={false} small={true}></Button>
+<ProgressBar title="Spanish" percentage={3}></ProgressBar>
+<Button url="https://www.google.de" title="Download my CV" external={false} small={false}></Button>
 <Button url="https://www.github.com/FinnWelzmueller" title="Checkout my Code" external={true} small={false}></Button>
 
 </Layout>
