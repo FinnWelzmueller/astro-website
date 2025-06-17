@@ -1,7 +1,0 @@
-Python 9
-LaTeX 7
-Java 4
-JavaScript 4
-HTML 4
-CSS 3
-C++ 2
