@@ -1,0 +1,3 @@
+German 10
+English 9
+Spanish 3
