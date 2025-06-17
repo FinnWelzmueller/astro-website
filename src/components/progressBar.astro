@@ -1,0 +1,18 @@
+---
+import '../styles/global.css';
+export interface Props {
+    title: string;
+    percentage: number;
+}
+const { title, percentage } = Astro.props;
+---
+
+<div class="px-4 py-4 bg-tagLight dark:bg-tagDark rounded-lg shadow-md mb-4">
+<div class="flex justify-between mb-1">
+  <span class="text-base font-medium text-dark dark:text-light">{title}</span>
+  <span class="text-sm font-medium text-dark dark:text-light">{percentage}/10</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+  <div class="bg-accentLight dark:bg-accentDark h-2.5 rounded-full" style={`width: ${percentage * 10}%`}></div>
+</div>
+</div>
