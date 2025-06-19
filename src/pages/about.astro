@@ -2,14 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/button.astro';
 import ProgressBar from '../components/progressBar.astro';
+import CakeChart from '../components/cakeChart.astro';
 ---
 <Layout title="About Me">
-
+<h1>Languages</h1>
 <ProgressBar title="German" percentage={10}></ProgressBar>
-<ProgressBar title="English" percentage={9}></ProgressBar>
-<Button url="/files/english_certificate_finn_welzmueller.pdf" title="Certificate" external={false} small={true}></Button>
+<ProgressBar title="English" percentage={9} docs={[{title:"Certificate", url: "/files/english_certificate_finn_welzmueller.pdf", small:true, external:false}]}></ProgressBar>
 <ProgressBar title="Spanish" percentage={3}></ProgressBar>
+
+<h1 class="mt-8">Coding</h1>
+<ProgressBar title="Python" percentage={9}></ProgressBar>
+<ProgressBar title="LaTeX" percentage={8}></ProgressBar>
+<ProgressBar title="Java" percentage={4}></ProgressBar>
+<ProgressBar title="JavaScript" percentage={3}></ProgressBar>
+<ProgressBar title="C++" percentage={2}></ProgressBar>
+
 <Button url="/files/cv_finn_welzmueller.pdf" title="Download my CV" external={false} small={false}></Button>
 <Button url="https://www.github.com/FinnWelzmueller" title="Checkout my Code" external={true} small={false}></Button>
 
+<CakeChart></CakeChart>
 </Layout>
