@@ -1,10 +1,19 @@
 ---
 import '../styles/global.css';
+import Button from './button.astro';
+interface DocLink {
+    title: string;
+    url: string;
+    external?: boolean;
+    small: boolean;
+}
+
 export interface Props {
     title: string;
     percentage: number;
+    docs?: DocLink[];
 }
-const { title, percentage } = Astro.props;
+const { title, percentage, docs } = Astro.props;
 ---
 
 <div class="px-4 py-4 bg-tagLight dark:bg-tagDark rounded-lg shadow-md mb-4">
@@ -15,4 +24,7 @@ const { title, percentage } = Astro.props;
 <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
   <div class="bg-accentLight dark:bg-accentDark h-2.5 rounded-full" style={`width: ${percentage * 10}%`}></div>
 </div>
+{docs && docs.length > 0 && (
+  <div class="mt-2">
+    {docs.map((doc) => (<Button url={doc.url} title={doc.title} external={doc.external} small={doc.small} />))}</div>)}
 </div>
