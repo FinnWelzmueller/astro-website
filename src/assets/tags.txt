@@ -1,142 +1,142 @@
-"Space Weather Phyiscs"
-"Space Weather Impact on Technology"
-"Space Weather Modelling and Forecasting"
-"Space Weather Surveillance"
-"System Engineering"
-"Flight Software"
-"On-Board Data Handling"
-"Power Systems"
-"AIV"
-"ADCS"
-"Spacecraft Communication" 
-"Spacecraft Operation"
-"Atmospheric Physics"
-"Climate Physics"
-"Communication Technologies for Space"
-"Space Electronics"
-"Scientific Computing"
-"Control Theory"
-"Geodesy & Gravity"
-"GNSS"
-"Machine Learning for Swarm Exploration"
-"Advanced Quantum Mechanics"
-"Astroparticle Physics"
-"Extragalactic Astrophysics"
-"Computational Astrophysics"
-"Scientific Writing"
-"Radio Astronomy"
-"Mathematics"
-"Classical Physics"
-"Astrophysics"
-"Quantum Mechanics"
-"Laboratory Work"
-"LaTeX"
-"Scientific Presentations"
-"Dark Matter"
-"Cosmic Rays"
-"Synchrotron Emission"
-"Simulation"
-"Python"
-"Software Development"
-"Scientific Computing"
-"Astroparticle Physics"
-"Radio Astronomy"
-"Dark Matter"
-"Dwarf Galaxies"
-"LOFAR"
-"Radio Astronomy"
-"Cosmic Rays"
-"Synchrotron Emission"
-"Simulation"
-"Data Analysis"
-"Python"
-"Astroparticle Physics"
-"Dark Matter"
-"Dwarf Galaxies"
-"LOFAR"
-"Radio Astronomy"
-"Cosmic Rays"
-"Synchrotron Emission"
-"Simulation"
-"Data Analysis"
-"Python"
-"Radio Astronomy"
-"Faraday Rotation"
-"Magnetic Fields"
-"Intergalactic Medium"
-"LOFAR"
-"VLA"
-"Databases"
-"Python"
-"Docker"
-"DevOps"
-"Laboratory Work"
-"Research Data Management"
-"Python"
-"Trajectory Modelling"
-"Rocketry"
-"Aerodynamics"
-"Numerical Simulations"
-"Literature Research"
-"LaTeX"
-"Git"
-"Teaching"
-"Project Management"
-"Workshop Development"
-"Python"
-"Git"
-"Data Science"
-"Visualization of scientific results"
-"X-ray astronomy"
-"Frontend programming"
-"Angular"
-"Python"
-"Bash"
-"Visualization of scientific results"
-"Git"
-"Teaching"
-"Software Development"
-"Object Oriented Programming"
-"Java"
-"UML"
-"Teaching"
-"Mathematics"
-"Teaching"
-"Project Management"
-"Workshop Developement"
-"Astro"
-"Tailwind CSS"
- "Git"
- "Frontend programming"
- "Web Development"
- "Flowbite"
- "Python"
- "Docker"
- "Machine Learning"
- "Scientific Computing"
- "Data Visualization"
- "Web Development"
- "Frontend programming"
- "Backend programming"
- "Databases"
- "X-ray astronomy"
- "Git"
- "Python"
- "Scientific Computing"
- "Data Visualization"
- "Git"
- "Software Development"
- "Astrophysics"
- "Python"
- "Angular"
- "Databases"
- "Scientific Computing"
- "Data Visualization"
- "Web Development"
- "Frontend programming"
- "X-ray astronomy"
- "Git"
- "LOFAR"
- "Python"
- "Scientific Computing"
- "Radio Astronomy"
+Space Weather Phyiscs
+Space Weather Impact on Technology
+Space Weather Modelling and Forecasting
+Space Weather Surveillance
+System Engineering
+Flight Software
+On-Board Data Handling
+Power Systems
+AIV
+ADCS
+Spacecraft Communication"
+Spacecraft Operation
+Atmospheric Physics
+Climate Physics
+Communication Technologies for Space
+Space Electronics
+Scientific Computing
+Control Theory
+Geodesy & Gravity
+GNSS
+Machine Learning for Swarm Exploration
+Advanced Quantum Mechanics
+Astroparticle Physics
+Extragalactic Astrophysics
+Computational Astrophysics
+Scientific Writing
+Radio Astronomy
+Mathematics
+Classical Physics
+Astrophysics
+Quantum Mechanics
+Laboratory Work
+LaTeX
+Scientific Presentations
+Dark Matter
+Cosmic Rays
+Synchrotron Emission
+Simulation
+Python
+Software Development
+Scientific Computing
+Astroparticle Physics
+Radio Astronomy
+Dark Matter
+Dwarf Galaxies
+LOFAR
+Radio Astronomy
+Cosmic Rays
+Synchrotron Emission
+Simulation
+Data Analysis
+Python
+Astroparticle Physics
+Dark Matter
+Dwarf Galaxies
+LOFAR
+Radio Astronomy
+Cosmic Rays
+Synchrotron Emission
+Simulation
+Data Analysis
+Python
+Radio Astronomy
+Faraday Rotation
+Magnetic Fields
+Intergalactic Medium
+LOFAR
+VLA
+Databases
+Python
+Docker
+DevOps
+Laboratory Work
+Research Data Management
+Python
+Trajectory Modelling
+Rocketry
+Aerodynamics
+Numerical Simulations
+Literature Research
+LaTeX
+Git
+Teaching
+Project Management
+Workshop Development
+Python
+Git
+Data Science
+Visualization of scientific results
+X-ray astronomy
+Frontend programming
+Angular
+Python
+Bash
+Visualization of scientific results
+Git
+Teaching
+Software Development
+Object Oriented Programming
+Java
+UML
+Teaching
+Mathematics
+Teaching
+Project Management
+Workshop Developement
+Astro
+ailwind CSS
+Git
+Frontend programming
+Web Development
+Flowbite
+Python
+Docker
+Machine Learning
+Scientific Computing
+Data Visualization
+Web Development
+Frontend programming
+Backend programming
+Databases
+X-ray astronomy
+Git
+Python
+Scientific Computing
+Data Visualization
+Git
+Software Development
+Astrophysics
+Python
+Angular
+Databases
+Scientific Computing
+Data Visualization
+Web Development
+Frontend programming
+X-ray astronomy
+Git
+LOFAR
+Python
+Scientific Computing
+Radio Astronomy
