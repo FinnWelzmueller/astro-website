@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import picture from '../assets/picture_square.png';
+import Button from '../components/button.astro';
 ---
 
 <Layout title="Hi! I'm Finn">
@@ -12,6 +13,8 @@ import picture from '../assets/picture_square.png';
     			My work spans from satellite systems and scientific research to web development and open source projects.
     			Welcome to my personal website — feel free to explore.
 			</div>
+			<Button url="/files/cv_finn_welzmueller.pdf" title="Download my CV" external={false} small={false}>
+				Download my CV
 		</div>
 		<div class="w-1/2 flex justify-center items-center py-10 ">
 			<Image src={picture} alt="Profile Picture" class="rounded-full w-3/4 h-3/4 border-4 border-dark dark:border-light"/>
