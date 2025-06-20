@@ -1,24 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from '../components/button.astro';
-import ProgressBar from '../components/progressBar.astro';
+import { Image } from 'astro:assets';
+import picture from '../assets/wordcloud.svg';
 import CakeChart from '../components/cakeChart.astro';
 ---
 <Layout title="About Me">
-<h1>Languages</h1>
-<ProgressBar title="German" percentage={10}></ProgressBar>
-<ProgressBar title="English" percentage={9} docs={[{title:"Certificate", url: "/files/english_certificate_finn_welzmueller.pdf", small:true, external:false}]}></ProgressBar>
-<ProgressBar title="Spanish" percentage={3}></ProgressBar>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<CakeChart 
+    title="Languages" 
+    id="cake-chart-languages" properties={[
+        {title: "German", percentage: 100, color: "#1C64F2", description: "C2"}, 
+        {title: "English", percentage: 90, color: "#16BDCA", description: "C1"}, 
+        {title: "Spanish", percentage: 30, color: "#FDBA8C", description: "A2"}]}, 
+    docs={[{url: "/files/english_certificate_finn_welzmueller.pdf", title: "Language Certificate English", small: true, external: false}]}/>
 
-<h1 class="mt-8">Coding</h1>
-<ProgressBar title="Python" percentage={9}></ProgressBar>
-<ProgressBar title="LaTeX" percentage={8}></ProgressBar>
-<ProgressBar title="Java" percentage={4}></ProgressBar>
-<ProgressBar title="JavaScript" percentage={3}></ProgressBar>
-<ProgressBar title="C++" percentage={2}></ProgressBar>
 
-<Button url="/files/cv_finn_welzmueller.pdf" title="Download my CV" external={false} small={false}></Button>
-<Button url="https://www.github.com/FinnWelzmueller" title="Checkout my Code" external={true} small={false}></Button>
+<CakeChart
+        title="Coding Skills" id="cake-chart-coding" properties={[
+            {title: "Python", percentage: 90, color: "#1C64F2", description: "90%"},
+            {title: "LaTeX", percentage: 80, color: "#16BDCA", description: "80%"},
+            {title: "Java", percentage: 40, color: "#FDBA8C", description: "40%"},
+            {title: "JavaScript", percentage: 30, color: "#FBBF24", description: "30%"},
+            {title: "C++", percentage: 20, color: "#F87171", description: "20%"}
+        ]}
+        docs={[{url: "https://github.com/FinnWelzmueller/", title: "Check Out my Code", small: true, external: true}]}/>
 
-<CakeChart></CakeChart>
+        </div>
 </Layout>
