@@ -70,14 +70,7 @@ const getChartOptions = () => {
     },
     labels: labels,
     legend: {
-      show: true,
-      position: "right",
-      fontFamily: "Inter",
-      labels: {useSeriesColors: false},
-  markers: {
-    width: 12,
-    height: 12
-  }
+      show: false
 },
     tooltip: {
   enabled: false,
@@ -122,21 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
     chart.render();
   };
 
-  // Wenn bereits "dark" gesetzt ist → sofort rendern
-  if (target.classList.contains("dark")) {
-    renderChart();
-    return;
-  }
+renderChart();
 
-  // Andernfalls: MutationObserver, der wartet bis "dark" erscheint
-  const observer = new MutationObserver(() => {
-    if (target.classList.contains("dark")) {
-      renderChart();
-      observer.disconnect();
-    }
-  });
-
-  observer.observe(target, { attributes: true, attributeFilter: ["class"] });
 });
 
 </script>
@@ -144,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<div class="max-w-sm w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6">
+<div class="max-w-sm w-full bg-cakeChartBackLight rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6 flex flex-col">
   <div class="flex justify-between mb-3">
     <div class="flex items-center">
       <div class="flex justify-center items-center">
@@ -154,10 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 
-  <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+  <div class="bg-cakeChartAccentLight dark:bg-gray-700 p-3 rounded-lg">
     <div class="grid grid-cols-3 gap-3 mb-2">
       {properties.map((p) => (
-    <dl class="rounded-lg flex flex-col items-center justify-center h-[78px] bg-gray-50 dark:bg-gray-600">
+    <dl class="rounded-lg flex flex-col items-center justify-center h-[78px] bg-cakeChartFieldsLight dark:bg-gray-600">
       <dt class="w-8 h-8 rounded-full text-sm font-medium flex items-center justify-center mb-1"
           style={`background-color: ${p.color}20; color: ${p.color}`}>
         {p.description}
@@ -172,9 +152,16 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="h-8"></div>
   <!-- Radial Chart -->
   <div class="py-6" id={`radial-chart-${id}`}></div>
-
+<div class="mt-4 space-y-2">
+  {labels.map((label, i) => (
+    <div class="flex items-center gap-2 text-sm">
+      <span class="w-3 h-3 rounded-full" style={`background-color: ${colors[i]}`}></span>
+      <span class="text-gray-800 dark:text-gray-200">{label}</span>
+    </div>
+  ))}
+</div>
 {docs && docs.length > 0 && (
-    <ul class="flex flex-wrap gap-2 mt-2">
+   <ul class="flex flex-wrap gap-2 mt-auto pt-4">
       {docs.map((doc) => (<Button url={doc.url} title={doc.title} external={doc.external} small={doc.small} />))}
     </ul>
   )}
