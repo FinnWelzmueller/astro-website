@@ -80,7 +80,7 @@ const getChartOptions = () => {
   }
 },
     tooltip: {
-  enabled: true,
+  enabled: false,
   fillSeriesColor: false,
   custom: function({ series, seriesIndex, w }) {
     const label = w.globals.labels[seriesIndex];
@@ -162,14 +162,14 @@ document.addEventListener("DOMContentLoaded", () => {
           style={`background-color: ${p.color}20; color: ${p.color}`}>
         {p.description}
       </dt>
-      <dd class="text-sm font-medium" style={`color: ${p.color}`}>{p.title}</dd>
+      <dd class="text-sm text-center font-medium" style={`color: ${p.color}`}>{p.title}</dd>
     </dl>
   ))}
       
       
     </div>
   </div>
-
+<div class="h-8"></div>
   <!-- Radial Chart -->
   <div class="py-6" id={`radial-chart-${id}`}></div>
 
