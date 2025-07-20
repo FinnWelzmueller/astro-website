@@ -1,6 +1,6 @@
 ---
-import LeftNavbarLinks from '../components/leftNavbarLinks.astro';
-import RightNavbarLinks from '../components/rightNavbarLinks.astro';
+import Navbar from '../components/navbar.astro';
+import Footer from '../components/footer.astro';
 const { title } = Astro.props;
 ---
 
@@ -23,21 +23,15 @@ const { title } = Astro.props;
 		<title>finnwelzmueller.online</title>
 	</head>
 	<body class="font-mono bg-light dark:bg-dark text-dark dark:text-light">
-		<main class="md:container md:mx-auto w-full min-h-screen">
-			<header class="sticky top-0 z-50 bg-light dark:bg-dark flex items-center justify-between px-4 py-8 font-medium">
-
-				<nav class="flex items-center justify-center gap-x-8 text-2xl">
-					<LeftNavbarLinks/>
-				</nav>
-				<nav class="flex items-center justify-center gap-x-5">
-					<RightNavbarLinks/>
-				</nav>
+		<main class="md:container md:mx-auto w-full min-h-screen pb-16">
+			<header class="sticky top-0 z-50 bg-light dark:bg-dark px-4 py-8 font-medium">
+  				<Navbar />
 			</header>
 			<article class="text-xl px-4">
 				<h1 class="text-4xl mb-6">{title}</h1>
 				<slot />
 			</article>
-			<footer></footer>
+			<Footer/>
 		</main>
 		<script src="/scripts/app.js" defer></script>
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
