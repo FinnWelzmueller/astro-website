@@ -5,13 +5,14 @@ import picture from '../assets/wordcloud.svg';
 import CakeChart from '../components/cakeChart.astro';
 ---
 <Layout title="About Me">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-1">
 <CakeChart 
     title="Languages" 
     id="cake-chart-languages" properties={[
         {title: "German", percentage: 100, color: "#16BDCA", description: "C2"}, 
         {title: "English", percentage: 90, color: "#83F28F", description: "C1"}, 
-        {title: "Spanish", percentage: 30, color: "#FDBA8C", description: "A2"}]}, 
+        {title: "Spanish", percentage: 30, color: "#FDBA8C", description: "A2"},
+        {title: "Russian", percentage: 10, color: "#FBBF24", description: "A1"},]}, 
     docs={[{url: "/files/english_certificate_finn_welzmueller.pdf", title: "Language Certificate English", small: true, external: false}]}/>
 
 
@@ -25,5 +26,18 @@ import CakeChart from '../components/cakeChart.astro';
         ]}
         docs={[{url: "https://github.com/FinnWelzmueller/", title: "Check Out my Code", small: true, external: true}]}/>
 
+
+<CakeChart
+        title="Science & IT"
+        id="cake-chart-science" properties={[
+            {title: "Docker", percentage: 80, color: "#16BDCA", description: "90%"},
+            {title: "Git", percentage: 80, color: "#83F28F", description: "80%"},
+            {title: "Data Analysis", percentage: 70, color: "#FDBA8C", description: "70%"},
+            {title: "Databases", percentage: 50, color: "#FBBF24", description: "50%"},
+            {title: "Sc. Talks", percentage: 50, color: "#F87171", description: "50%"},
+            {title: "Sc. Writing", percentage: 40, color: "#00D9C0", description: "40%"}
+
+            
+        ]}/>
         </div>
 </Layout>
