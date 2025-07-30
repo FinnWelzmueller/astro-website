@@ -26,4 +26,5 @@ pnpm-debug.log*
 
 .vscode
 *.pdf
-*.htpasswd
+
+docker-compose.yml
