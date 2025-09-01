@@ -6,7 +6,17 @@ import CVEntry from "../components/CVEntry.astro";
     <h1 class="text-4xl mb-6">My Coding Projects</h1>
     <div class="px-2 sm:px-6 lg:px-12">
     <ol class="relative border-s border-gray-300 dark:border-gray-700"> 
-        <CVEntry
+    <CVEntry
+        name="sshame"
+        yearStart='2025'
+        tags={["Python", "SSH", "Security", "Git", "Software Development", "Grafana", "Docker", "MySQL", "Web Development", "Backend programming", "Data Visualization"]}
+        docs={[{title: "Project", url: "https://sshame.finnwelzmueller.online", small: true, external: true}, {title: "Code", url: "https://github.com/FinnWelzmueller/sshame", external: true, small: true}]}
+        >
+        This web application provides a dashboard to monitor and visualize SSH login attempts on a server. It collects data from the server's authentication logs, processes it, and displays it in an easy-to-understand format using Grafana.
+        The project is built with Python, MySQL, Grafana and is deployed with Docker. 
+    </CVEntry>
+
+    <CVEntry
         name="ESA Acceleration Days: Space Weather Resilience Hackathon"
         yearStart='2025'
         tags={["Space Weather", "Hackathon", "Computer Vision", "Machine Learning"]}
@@ -16,7 +26,7 @@ import CVEntry from "../components/CVEntry.astro";
         three-dimensional trajectories from two-dimensional images of the Sun. The idea won the second place in the hackathon and was awarded with a prize.
     </CVEntry>
 
-        <CVEntry
+    <CVEntry
         name="astro-website"
         yearStart="2025"
         tags={["Astro", "Tailwind CSS", "Git", "Frontend programming", "Web Development", "Flowbite"]}
