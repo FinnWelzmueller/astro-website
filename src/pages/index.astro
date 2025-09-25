@@ -8,7 +8,6 @@ import Button from '../components/button.astro';
 <h1  class="text-4xl mb-6">Hi! I'm <span id="typewriter" class="inline-block min-w-[21ch]">Finn</span></h1>
 <div class="h-8"></div>
 <div class="flex flex-col lg:flex-row items-center gap-10 px-6 py-16">
-	<!-- 1. Profilbild -->
 	<div class="flex justify-center w-full lg:w-1/2">
 		<img
 			src={picture.src}
@@ -16,8 +15,6 @@ import Button from '../components/button.astro';
 			class="rounded-full w-64 h-64 border-4 border-dark dark:border-light shadow-md"
 		/>
 	</div>
-
-	<!-- 2. Textblock + CV -->
 	<div class="w-full lg:w-1/2 text-lg leading-relaxed text-center lg:text-left">
 		<p class="mb-4">
 			Physicist, space enthusiast, and software developer with a passion for exploring data and building software tools.
@@ -31,4 +28,25 @@ import Button from '../components/button.astro';
 		</div>
 	</div>
 </div>
+
+
+<div id="bottom-banner" tabindex="-1" class="fixed bottom-0 start-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div class="flex items-center mx-auto">
+        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+            
+            <span>Want to work with me? I am looking for a PhD position or a job in the space sector from March, 2026 onwards.
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+  </svg></a></span>
+        </p>
+    </div>
+    <div class="flex items-center">
+        <button data-dismiss-target="#bottom-banner" type="button" class="shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+            <span class="sr-only">Close banner</span>
+        </button>
+    </div>
+</div>
+
 </Layout>
