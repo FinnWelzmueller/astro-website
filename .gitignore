@@ -26,5 +26,3 @@ pnpm-debug.log*
 
 .vscode
 *.pdf
-
-docker-compose.yml

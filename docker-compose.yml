@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  astro-site:
+    container_name: astro-website
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
