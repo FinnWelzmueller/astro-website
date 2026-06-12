@@ -5,11 +5,19 @@ import CVEntry from "../components/CVEntry.astro";
 <Layout>
     <h1 class="text-4xl mb-6">My Work Experience</h1>
     <div class="px-2 sm:px-6 lg:px-12">
-    <ol class="relative border-s border-gray-300 dark:border-gray-700">      
+    <ol class="relative border-s border-gray-300 dark:border-gray-700"> 
+    
+    <CVEntry
+    name="PhD Researcher",
+    location="German Aerospace Center (DLR), Institute for Solar-Terrestrial Physics",
+    yearStart="2026",
+    tags={["Space Science", "Data Science", "Pytthon", "Space Weather", "Scientific Writing", "Scientific Presentations"]}/>
+    
     <CVEntry
     name="Working Student"
     location="German Aerospace Center (DLR), Institute for Space Systems"
-    yearStart="2024"
+    yearStart="2024",
+    yearEnd="2026",
     tags={["Databases", "Python", "Docker", "DevOps", "Laboratory Work", "Research Data Management"]}/>
 
     <CVEntry

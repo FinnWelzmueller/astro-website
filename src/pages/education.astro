@@ -6,7 +6,14 @@ import CVEntry from "../components/CVEntry.astro";
 <Layout>
     <h1 class="text-4xl mb-6">My Education</h1>
 <div class="px-2 sm:px-6 lg:px-12">
-<ol class="relative border-s border-gray-300 dark:border-gray-700">                  
+<ol class="relative border-s border-gray-300 dark:border-gray-700">  
+    
+    <CVEntry
+    name="Summer School on Machine Learning for Space Physics",
+    yearStart="2026",
+    yearEnd="2026",
+    location="KTH Royal Institute of Technology",
+    tags={["Space Science", "Machine Learning", "Deep Learning", "Heliophysics", "Magnetospheric Physics"]}/>
 
     <CVEntry
     name="Postgraduate International Programme Summer School",
@@ -38,6 +45,7 @@ import CVEntry from "../components/CVEntry.astro";
     name="Space Sciences and Technologies" 
     degree="Master of Science"
     yearStart="2023" 
+    yearEnd="2026"
     grade="1.1" 
     location="University of Bremen"
     tags={["Atmospheric Physics", "Climate Physics", "Communication Technologies for Space", "Space Electronics", "Control Theory", "Geodesy & Gravity", "GNSS", "Machine Learning for Swarm Exploration"]}
